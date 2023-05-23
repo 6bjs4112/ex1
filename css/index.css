@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+h2,p{margin: 0;}
+/* 각 태그에 자동으로 들어가는 마진 없애주기 */
+
+*{
+    box-sizing: border-box;
+    /*박스 사이즈에 변형을 일으키는 것을 막아줌, 여백 크기 계산안해도 되게끔
+    그래서 보통 모든 태그에 적용 시킴 */
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+.ex1{
+    width: 1045px;
+    height: 745px;
+    margin: 100px auto;
+    padding: 80px;
+    border: 1px solid #ddd;
+    background-color: #f6f5f5;
+    /* text-align: center; */
+}
+.ex1 > h2, .ex1 > p{/*둘만 주고싶으면 이렇게 지정할수도 있음*/
+    text-align: center;
+}
+.ex1 > h2{
+    font-size: 36px;
+    color: #dc3545;    
+}
+.ex1 > p{
+    font-size: 18px;
+    color: #424d59;
+    margin: 30px 0  70px 0;
+}
+.ex1 > div {
+    display: flex;
+    justify-content: space-between;
+}
+.ex1 > div >p{
+    /* width: 283px; 이렇게하면 ex1크기를 줄였을때 틀이 깨짐*/
+    width: 32%; 
+}
+.ex1 > div > p >img {
+    width: 100%;
+    filter: grayscale(100%);
+}
+.ex1 > div > p >img:hover {
+    /* opacity: 0.5; */
+    filter: grayscale(0%);
+}
